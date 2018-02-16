@@ -1,0 +1,14 @@
+<form class="example-form">
+  <app-autocomplete-overview-example [(ngModel)]="selectedDivision" [ngModelOptions]="{standalone: true}"></app-autocomplete-overview-example>
+  <mat-form-field style="width:100%!important;">
+    <input matInput placeholder="Display Name" [(ngModel)]="displayName" name="displayName">
+  </mat-form-field>
+  <mat-form-field style="width:100%!important;">
+    <input matInput placeholder="Attribute Name" [(ngModel)]="attributeName" name="attrName">
+  </mat-form-field>
+    <mat-checkbox class="example-margin" [(ngModel)]="isRequired" name="isRequired">Required</mat-checkbox>
+<br/><br/>
+    <mat-checkbox class="example-margin" [(ngModel)]="isIncluded" name="isIncluded">Included in</mat-checkbox>
+    <button mat-button (click)="onNoClick()" class="mat-raised-button mat-primary">Cancel</button>
+    <button mat-button (click)="saveData()" class="mat-raised-button mat-accent">Save</button>
+</form>

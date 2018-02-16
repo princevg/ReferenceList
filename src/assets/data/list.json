@@ -1,0 +1,16 @@
+[
+  {
+    "selectedDivision": "Human Resources",
+    "displayName": "Arun",
+    "attributeName": "contract",
+    "isRequired": true,
+    "isIncluded": false
+  },
+  {
+    "selectedDivision": "Frontend",
+    "displayName": "Vinay",
+    "attributeName": "contract",
+    "isRequired": true,
+    "isIncluded": true
+  }
+]
