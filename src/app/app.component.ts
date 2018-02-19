@@ -28,7 +28,7 @@ export class AppComponent {
   }
 
   public getJSON(): Observable<any> {
-      return this.http.get('../assets/data/list.json');
+      return this.http.get('/assets/data/list.json');
   }
 
   getAndSaveData($event) {
