@@ -1,3 +1,4 @@
+import { ListReferenceComponent } from './Feature/reference/list-reference/list-reference.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,16 +22,18 @@ import {
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { AppPopupFormComponent, AppPopupFormDialogComponent } from './popup-form/popup-form.component';
-import { AutocompleteOverviewExampleComponent } from './popup-form/autocomplete/autocomplete.component';
+import { AddReferenceComponent } from './Feature/reference/add-reference/add-reference.component';
+import { DialogComponentComponent } from './Shared/dialog-component/dialog-component.component';
+import { AutocompleteComponent } from './Shared/autocomplete/autocomplete.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppPopupFormComponent,
-    AppPopupFormDialogComponent,
-    AutocompleteOverviewExampleComponent,
+    AddReferenceComponent,
+    ListReferenceComponent,
+    DialogComponentComponent,
+    AutocompleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,7 @@ import { AutocompleteOverviewExampleComponent } from './popup-form/autocomplete/
     MatTableModule
   ],
   entryComponents: [
-    AppPopupFormDialogComponent
+    DialogComponentComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

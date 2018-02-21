@@ -1,10 +1,11 @@
-import { Division } from './../../division.model';
+import { Division } from './division.model';
 import {Component, forwardRef} from '@angular/core';
 import {FormControl, NG_VALUE_ACCESSOR, ControlValueAccessor, ReactiveFormsModule} from '@angular/forms';
 import {Observable} from 'rxjs/Observable';
 import {startWith} from 'rxjs/operators/startWith';
 import {map} from 'rxjs/operators/map';
 import {MatInput} from '@angular/material';
+
 
 /**
  * @title Autocomplete overview
@@ -14,18 +15,18 @@ const vodFunc = () => {
 
 export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => AutocompleteOverviewExampleComponent),
+  useExisting: forwardRef(() => AutocompleteComponent),
   multi: true
 };
 
 @Component({
-  selector: 'app-autocomplete-overview-example',
+  selector: 'app-autocomplete',
+  templateUrl: './autocomplete.component.html',
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR],
-  templateUrl: 'autocomplete.component.html',
-  styleUrls: ['autocomplete.component.css']
+  styleUrls: ['./autocomplete.component.css']
 })
 
-export class AutocompleteOverviewExampleComponent implements ControlValueAccessor {
+export class AutocompleteComponent implements ControlValueAccessor {
   stateCtrl: FormControl;
   selectedDivision: string;
   filteredDivisions: Observable<any[]>;
