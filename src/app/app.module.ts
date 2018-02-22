@@ -1,7 +1,6 @@
-import { ListReferenceComponent } from './Feature/reference/list-reference/list-reference.component';
+import { ListReferenceComponent } from './feature/reference/list-reference/list-reference.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,10 +21,10 @@ import {
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { AddReferenceComponent } from './Feature/reference/add-reference/add-reference.component';
-import { DialogComponentComponent } from './Shared/dialog-component/dialog-component.component';
-import { AutocompleteComponent } from './Shared/autocomplete/autocomplete.component';
-
+import { AddReferenceComponent } from './feature/reference/add-reference/add-reference.component';
+import { DialogComponentComponent } from './shared/dialog-component/dialog-component.component';
+import { AutocompleteComponent } from './shared/autocomplete/autocomplete.component';
+import { DataService } from './feature/reference/list-reference/service/list-reference.service';
 
 @NgModule({
   declarations: [
@@ -72,7 +71,7 @@ import { AutocompleteComponent } from './Shared/autocomplete/autocomplete.compon
   entryComponents: [
     DialogComponentComponent
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
