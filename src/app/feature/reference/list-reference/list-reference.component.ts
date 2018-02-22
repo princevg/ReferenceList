@@ -1,3 +1,5 @@
+import { FormModel } from './../../../shared/dialog-component/models/form.model';
+import { DataService } from './service/list-reference.service';
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import {MatPaginator, MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
@@ -10,7 +12,7 @@ import { Observable } from 'rxjs/Observable';
 })
 
 export class ListReferenceComponent implements OnChanges {
-
+  dataService: DataService;
   @Input() elementData;
   displayedColumns: string[];
   constructor(private http: HttpClient) {
@@ -18,10 +20,6 @@ export class ListReferenceComponent implements OnChanges {
   }
 
   ngOnChanges () {
-    this.elementData = new MatTableDataSource<Element>(this.elementData);
-  }
-
-  public getJSON(): Observable<any> {
-      return this.http.get('/assets/data/list.json');
+    this.elementData = new MatTableDataSource<FormModel>(this.elementData);
   }
 }

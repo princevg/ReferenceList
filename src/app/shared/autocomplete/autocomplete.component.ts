@@ -1,4 +1,4 @@
-import { Division } from './division.model';
+import { Division } from './models/division.model';
 import {Component, forwardRef} from '@angular/core';
 import {FormControl, NG_VALUE_ACCESSOR, ControlValueAccessor, ReactiveFormsModule} from '@angular/forms';
 import {Observable} from 'rxjs/Observable';

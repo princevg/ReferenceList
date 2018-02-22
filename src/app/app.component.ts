@@ -1,14 +1,7 @@
+import { DataService } from './feature/reference/list-reference/service/list-reference.service';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-
-export interface Element {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,15 +11,12 @@ export interface Element {
 export class AppComponent {
   elementData;
   displayedColumns: string[];
-  constructor(private http: HttpClient) {
+
+  constructor(private http: HttpClient, private dataService: DataService) {
     this.displayedColumns = ['selectedDivision', 'displayName', 'attributeName', 'isRequired', 'isIncluded'];
-    this.getJSON().subscribe(data => {
+    this.dataService.getJSON().subscribe(data => {
         this.elementData = data;
     });
-  }
-
-  public getJSON(): Observable<any> {
-      return this.http.get('/assets/data/list.json');
   }
 
   getAndSaveData($event) {
