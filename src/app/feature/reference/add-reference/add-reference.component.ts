@@ -1,6 +1,6 @@
 import { DialogComponentComponent } from './../../../shared/dialog-component/dialog-component.component';
-import {Component, Inject, Output, EventEmitter, Input  } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {Component, Output, EventEmitter } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({

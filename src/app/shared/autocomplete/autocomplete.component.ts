@@ -1,10 +1,8 @@
 import { Division } from './models/division.model';
 import {Component, forwardRef} from '@angular/core';
-import {FormControl, NG_VALUE_ACCESSOR, ControlValueAccessor, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import {Observable} from 'rxjs/Observable';
-import {startWith} from 'rxjs/operators/startWith';
 import {map} from 'rxjs/operators/map';
-import {MatInput} from '@angular/material';
 
 
 /**
